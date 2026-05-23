@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PokeGuess</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23ee1515' stroke='%23222' stroke-width='4'/%3E%3Cpath d='M2 50h96' stroke='%23222' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='14' fill='%23fff' stroke='%23222' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23fff' stroke='%23222' stroke-width='3'/%3E%3C/svg%3E">
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f1722;
+      color: #e8eef7;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    h1 { color: #ffcb05; margin-bottom: 0.25rem; }
+    h2 { color: #ffcb05; margin-top: 2.25rem; font-size: 1.25rem; }
+    h3 { color: #e8eef7; margin-top: 1.5rem; font-size: 1.05rem; }
+    .updated { color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.5rem; }
+    a { color: #ffcb05; }
+    .back { display: inline-block; margin-bottom: 2rem; color: #94a3b8; text-decoration: none; }
+    .back:hover { color: #ffcb05; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="./">&larr; Back</a>
+    <h1>Privacy Policy — PokeGuess</h1>
+    <p class="updated">Last updated: 23 May 2026 · Effective: 23 May 2026</p>
+
+    <h2>1. Overview</h2>
+    <p>PokeGuess ("the App") is an unofficial, fan-made mobile application. This policy explains what data the App processes, why, and the rights you have. We do not sell your personal data. The data controller for personal information processed in connection with the App can be contacted at <a href="mailto:pokeguess@hotmail.com">pokeguess@hotmail.com</a>.</p>
+
+    <h2>2. Data We Process</h2>
+
+    <h3>2.1 Data stored only on your device</h3>
+    <ul>
+      <li><strong>Game progress</strong>: captured Pokémon, scores, trophies, eggs, settings, language preference. Stored locally in the device's SQLite database. Never leaves your device unless you sign in (see 2.2).</li>
+      <li><strong>App preferences</strong>: theme, sound, haptics, tutorial state. Stored locally in AsyncStorage.</li>
+    </ul>
+
+    <h3>2.2 Data we process when you sign in (optional)</h3>
+    <ul>
+      <li><strong>Account identifier</strong>: your email address and a unique user ID provided by Google Sign-In.</li>
+      <li><strong>Synced game progress</strong>: a copy of your game progress is uploaded so you can restore it on another device.</li>
+    </ul>
+    <p>This data is stored on Supabase (EU region) under our project. Legal basis: contract performance (GDPR Art. 6(1)(b)) — providing the cloud-save feature you requested by signing in.</p>
+
+    <h3>2.3 Data processed by advertising</h3>
+    <ul>
+      <li><strong>Advertising identifiers</strong> (AAID on Android, IDFA on iOS) and limited device/usage signals, used by Google AdMob to serve ads.</li>
+      <li><strong>Consent choice</strong>: in the EU/EEA/UK, we display a Google UMP consent dialog before loading ads. Your choice (personalized vs non-personalized ads) is stored locally and respected on every ad request. Legal basis: consent (GDPR Art. 6(1)(a)).</li>
+      <li>Outside the EU/EEA/UK, ads may be personalized by default in accordance with local law.</li>
+    </ul>
+
+    <h3>2.4 Data processed for in-app purchases</h3>
+    <ul>
+      <li><strong>Purchase receipts and entitlement state</strong>: processed by RevenueCat (our subscription/IAP provider) and by Google Play / Apple App Store to validate purchases and restore them. Legal basis: contract performance.</li>
+    </ul>
+
+    <h3>2.5 What we do <em>not</em> collect</h3>
+    <ul>
+      <li>No precise location.</li>
+      <li>No contacts, photos, microphone, camera or files.</li>
+      <li>No analytics SDK tracking user behaviour beyond what AdMob requires to serve ads.</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <p>The App relies on the following processors. Please review their privacy policies:</p>
+    <ul>
+      <li><strong>Google AdMob</strong> (advertising) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+      <li><strong>Google Sign-In</strong> (authentication) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+      <li><strong>Google User Messaging Platform (UMP)</strong> (EU/UK consent) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+      <li><strong>Supabase</strong> (cloud backup) — <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>RevenueCat</strong> (in-app purchase management) — <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
+      <li><strong>Google Play Billing / Apple App Store</strong> (payment processing) — see Google / Apple privacy policies.</li>
+    </ul>
+
+    <h2>4. Data Retention</h2>
+    <ul>
+      <li><strong>Local data</strong>: kept on your device until you uninstall the App or clear its storage.</li>
+      <li><strong>Cloud account data</strong>: kept while your account is active. Deleted within 30 days of an account-deletion request (see Section 6).</li>
+      <li><strong>Advertising identifiers</strong>: see Google's retention policy. You can reset your advertising ID in your device settings at any time.</li>
+    </ul>
+
+    <h2>5. International Transfers</h2>
+    <p>Supabase hosting is in the EU. Google AdMob, Google Sign-In and RevenueCat may transfer data outside the EU/EEA under Standard Contractual Clauses or equivalent safeguards published by those processors.</p>
+
+    <h2>6. Your Rights</h2>
+
+    <h3>6.1 EU/EEA/UK (GDPR / UK GDPR)</h3>
+    <p>You have the right to access, rectify, erase, restrict, and port your data, and to object to processing. To exercise these rights, email <a href="mailto:pokeguess@hotmail.com">pokeguess@hotmail.com</a>. You also have the right to lodge a complaint with your local data protection authority.</p>
+
+    <h3>6.2 California (CCPA / CPRA)</h3>
+    <p>California residents have the right to know what personal information we process, to request deletion, to correct inaccurate information, and to opt out of "sale" or "sharing" of personal information. We do not sell personal information. To exercise these rights, email <a href="mailto:pokeguess@hotmail.com">pokeguess@hotmail.com</a>.</p>
+
+    <h3>6.3 How to delete your account and data</h3>
+    <p>To request deletion of your account and all associated cloud data:</p>
+    <ul>
+      <li>Email <a href="mailto:pokeguess@hotmail.com?subject=Account%20Deletion%20Request">pokeguess@hotmail.com</a> with the subject "Account Deletion Request" from the email address linked to your account.</li>
+      <li>Your account and all associated synced data will be permanently deleted from our Supabase backend within 30 days.</li>
+      <li>To also remove local data, uninstall the App or clear its storage in your device settings.</li>
+    </ul>
+    <p>An account-deletion link is also published at <a href="./account-deletion.html">armytille.github.io/account-deletion.html</a>.</p>
+
+    <h2>7. Children</h2>
+    <p>The App is not directed at children under 13 (or under the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal data from children. If you believe a child has provided us personal data, contact us and we will delete it. In the US, we comply with COPPA: we do not knowingly collect personal information from children under 13 without verifiable parental consent.</p>
+
+    <h2>8. Security</h2>
+    <p>Data sent to Supabase is transmitted over HTTPS and protected at rest by the provider's encryption. We use Row Level Security so that each user can only access their own rows. No system is 100% secure; please use a strong, unique password for your Google account.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. The "Last updated" date at the top reflects the most recent revision. Material changes will be highlighted in the App.</p>
+
+    <h2>10. Contact</h2>
+    <p>Questions about this policy or about your data: <a href="mailto:pokeguess@hotmail.com">pokeguess@hotmail.com</a>.</p>
+  </main>
+</body>
+</html>

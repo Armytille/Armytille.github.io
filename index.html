@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeGuess — Unofficial Pokémon Fan App</title>
+  <meta name="description" content="PokeGuess is an unofficial fan-made mobile app: guess Pokémon in a hangman-style game, build your collection, hatch eggs and complete your Pokédex.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23ee1515' stroke='%23222' stroke-width='4'/%3E%3Cpath d='M2 50h96' stroke='%23222' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='14' fill='%23fff' stroke='%23222' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23fff' stroke='%23222' stroke-width='3'/%3E%3C/svg%3E">
+
+  <meta property="og:title" content="PokeGuess — Unofficial Pokémon Fan App">
+  <meta property="og:description" content="Guess Pokémon in a hangman-style game, build your collection, hatch eggs and complete your Pokédex.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armytille.github.io/">
+  <meta name="twitter:card" content="summary">
+
+  <style>
+    :root {
+      --bg: #0f1722;
+      --card: #1a2433;
+      --fg: #e8eef7;
+      --muted: #94a3b8;
+      --accent: #ffcb05;
+      --accent-dark: #b8860b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f1722 0%, #1a2433 100%);
+      color: var(--fg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    main {
+      max-width: 640px;
+      width: 100%;
+      background: var(--card);
+      padding: 3rem 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem;
+      color: var(--accent);
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    p { line-height: 1.6; }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: #0f1722;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    a.btn:hover { background: var(--accent-dark); color: var(--fg); }
+    a.btn.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    a.btn.secondary:hover { background: var(--accent); color: #0f1722; }
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    .disclaimer {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: rgba(255,203,5,0.08);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>PokeGuess</h1>
+    <p class="tagline">An unofficial Pokémon fan-made mobile app.</p>
+    <p>Guess Pokémon in a hangman-style game, build your collection, hatch eggs, and complete your Pokédex.</p>
+
+    <div class="links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.armytille.pokeguess">Get it on Google Play</a>
+      <a class="btn secondary" href="./privacy.html">Privacy Policy</a>
+    </div>
+
+    <div class="disclaimer">
+      PokeGuess is an unofficial, fan-made application. It is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, Game Freak, The Pokémon Company, or any of their affiliates. Pokémon and all related names, images and characters are trademarks of their respective owners.
+    </div>
+
+    <footer>
+      Contact: <a href="mailto:pokeguess@hotmail.com">pokeguess@hotmail.com</a>
+    </footer>
+  </main>
+</body>
+</html>
