@@ -1,1 +1,72 @@
+# ── Direct sellers ────────────────────────────────────────────────────────────
+
+# Google AdMob — publisher id matches ca-app-pub-8347040636062842 in app.json
 google.com, pub-8347040636062842, DIRECT, f08c47fec0942fa0
+
+# Adagio — the only partnership currently active
+adagio.io, 1818, DIRECT
+adagio.io, 1818-OB, RESELLER
+
+# OneTag
+onetag.com, 97d79a66340e9ee, DIRECT
+onetag.com, 97d79a66340e9ee-OB, DIRECT
+
+# OpenX
+openx.com, 599669638, DIRECT, 6a698e2ec38604c6
+
+# Magnite / Rubicon Project
+# Verify this seller id really belongs to our account before publishing.
+rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
+
+
+# ── Authorized resellers, Adagio supply chain ─────────────────────────────────
+
+# Adagio → Magnite
+rubiconproject.com, 19116, RESELLER, 0bfd66d529a55807
+
+# Adagio → PubMatic
+pubmatic.com, 159110, RESELLER, 5d62403b186f2ace
+
+# Adagio → Improve Digital
+improvedigital.com, 1790, RESELLER
+
+# Adagio → OneTag
+onetag.com, 6b859b96c564fbe, RESELLER
+
+# Adagio → Equativ
+smartadserver.com, 3554, RESELLER
+sharethrough.com, 3554, RESELLER, d53b998a7bd4ecd2
+
+# Adagio → Sovrn
+lijit.com, 367236, RESELLER, fafdf38b16bf6b2b
+rubiconproject.com, 17960, RESELLER, 0bfd66d529a55807
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+
+# Adagio → OpenX
+openx.com, 558899373, RESELLER, 6a698e2ec38604c6
+
+# Adagio → TripleLift
+triplelift.com, 13482, RESELLER, 6c33edb13117fd86
+
+# Adagio → Nexxen
+video.unrulymedia.com, 5672421953199218469, RESELLER
+
+# Adagio → FreeWheel
+freewheel.tv, 536359-r-524565, RESELLER
+freewheel.tv, 536359-r-523319, RESELLER
+
+# Adagio → Adform
+adform.com, 3354, RESELLER, 9f5210a2f0999e32
+
+
+# ── Authorized resellers, OneTag supply chain ─────────────────────────────────
+
+# These three are shared with the Adagio → OneTag chain, so they appear once:
+#   appnexus.com 13099 · pubmatic.com 161593 · rubiconproject.com 11006
+appnexus.com, 13099, RESELLER
+pubmatic.com, 161593, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 11006, RESELLER, 0bfd66d529a55807
+video.unrulymedia.com, 586616193, RESELLER
+smartadserver.com, 4111, RESELLER
