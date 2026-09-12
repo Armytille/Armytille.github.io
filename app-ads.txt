@@ -1,72 +1,91 @@
-# ── Direct sellers ────────────────────────────────────────────────────────────
+# app-ads.txt — PokeGuess (com.armytille.pokeguess)
+# IAB Tech Lab ads.txt / app-ads.txt v1.1
+#
+# This file is the source of truth. It must be served at
+#   https://armytille.github.io/app-ads.txt
+# on the exact domain declared as the developer website in the Play Store
+# listing (and later the marketing URL in App Store Connect):
+# HTTP 200, Content-Type text/plain, no cross-domain redirect.
+# The site repo carries its own copy, so redeploy it after every change here.
+#
+# Format: <ad system domain>, <seller id>, <DIRECT|RESELLER>[, <TAG-ID>]
+#
+# Every line below was checked on 2026-09-12 against the ad system's own
+# sellers.json: the seller id exists, its seller_type agrees with the
+# relationship (PUBLISHER/BOTH → DIRECT, INTERMEDIARY → RESELLER), and the
+# certification id is the TAG-ID that ad system publishes. Exceptions are
+# called out in place.
 
-# Google AdMob — publisher id matches ca-app-pub-8347040636062842 in app.json
+OWNERDOMAIN=armytille.github.io
+
+
+# ── Direct: accounts we control ───────────────────────────────────────────────
+
+# Google AdMob — publisher id of ca-app-pub-8347040636062842 in app.json.
+# Google sellers.json: PUBLISHER, confidential (the AdMob default).
 google.com, pub-8347040636062842, DIRECT, f08c47fec0942fa0
 
-# Adagio — the only partnership currently active
+# Adagio — our own publisher account, the only direct partnership active.
+# adagio.io sellers.json: 1818 = PUBLISHER "Dan Zarca" / armytille.github.io,
+# 1818-OB = the same account fronted by Google Open Bidding, so INTERMEDIARY.
 adagio.io, 1818, DIRECT
 adagio.io, 1818-OB, RESELLER
 
-# OneTag
-onetag.com, 97d79a66340e9ee, DIRECT
-onetag.com, 97d79a66340e9ee-OB, DIRECT
 
-# OpenX
-openx.com, 599669638, DIRECT, 6a698e2ec38604c6
+# ── Resellers: AdMob bidding partners ─────────────────────────────────────────
+# Both accounts are controlled by Google, not by us, hence RESELLER.
 
-# Magnite / Rubicon Project
-# Verify this seller id really belongs to our account before publishing.
-rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
+# openx.com sellers.json: 599669638 = INTERMEDIARY "ADMOB PokeGuess (via EB)"
+openx.com, 599669638, RESELLER, 6a698e2ec38604c6
+
+# rubiconproject.com sellers.json: 22884 = INTERMEDIARY "Google" / google.com
+rubiconproject.com, 22884, RESELLER, 0bfd66d529a55807
 
 
-# ── Authorized resellers, Adagio supply chain ─────────────────────────────────
+# ── Resellers: Adagio supply chain ────────────────────────────────────────────
+# Adagio-owned accounts (domain adagio.io in each ad system's sellers.json).
 
-# Adagio → Magnite
-rubiconproject.com, 19116, RESELLER, 0bfd66d529a55807
-
-# Adagio → PubMatic
-pubmatic.com, 159110, RESELLER, 5d62403b186f2ace
-
-# Adagio → Improve Digital
-improvedigital.com, 1790, RESELLER
-
-# Adagio → OneTag
-onetag.com, 6b859b96c564fbe, RESELLER
-
-# Adagio → Equativ
-smartadserver.com, 3554, RESELLER
-sharethrough.com, 3554, RESELLER, d53b998a7bd4ecd2
-
-# Adagio → Sovrn
-lijit.com, 367236, RESELLER, fafdf38b16bf6b2b
-rubiconproject.com, 17960, RESELLER, 0bfd66d529a55807
-pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
-pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
-openx.com, 538959099, RESELLER, 6a698e2ec38604c6
-
-# Adagio → OpenX
-openx.com, 558899373, RESELLER, 6a698e2ec38604c6
-
-# Adagio → TripleLift
-triplelift.com, 13482, RESELLER, 6c33edb13117fd86
-
-# Adagio → Nexxen
-video.unrulymedia.com, 5672421953199218469, RESELLER
-
-# Adagio → FreeWheel
-freewheel.tv, 536359-r-524565, RESELLER
-freewheel.tv, 536359-r-523319, RESELLER
-
-# Adagio → Adform
 adform.com, 3354, RESELLER, 9f5210a2f0999e32
+freewheel.tv, 536359-r-523319, RESELLER, 74e8e47458f74754
+freewheel.tv, 536359-r-524565, RESELLER, 74e8e47458f74754
+improvedigital.com, 1790, RESELLER
+onetag.com, 6b859b96c564fbe, RESELLER
+openx.com, 558899373, RESELLER, 6a698e2ec38604c6
+pubmatic.com, 159110, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 19116, RESELLER, 0bfd66d529a55807
+sharethrough.com, 3554, RESELLER, d53b998a7bd4ecd2
+smartadserver.com, 3554, RESELLER, 060d053dcf45cbf3
+triplelift.com, 13482, RESELLER, 6c33edb13117fd86
+video.unrulymedia.com, 5672421953199218469, RESELLER, 98c21ef9a666c68b
+
+# Published by Adagio at https://adagio.io/ads.txt but not resolvable on the ad
+# system side on 2026-09-12: indexexchange.com does not list 194558 in its
+# sellers.json, and pubwise.io/sellers.json answered 502. Kept because our
+# direct partner publishes them; recheck at the next audit.
+indexexchange.com, 194558, RESELLER
+pubwise.io, 68867843, RESELLER, c327c91a93a7cdd3
 
 
-# ── Authorized resellers, OneTag supply chain ─────────────────────────────────
+# ── Resellers: Sovrn, reached through Adagio ──────────────────────────────────
+# lijit.com 367236 is Adagio's Sovrn account; the rest are Sovrn's own
+# downstream accounts (domain lijit.com).
 
-# These three are shared with the Adagio → OneTag chain, so they appear once:
-#   appnexus.com 13099 · pubmatic.com 161593 · rubiconproject.com 11006
-appnexus.com, 13099, RESELLER
+lijit.com, 367236, RESELLER, fafdf38b16bf6b2b
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 17960, RESELLER, 0bfd66d529a55807
+
+
+# ── Resellers: OneTag, reached through Adagio ─────────────────────────────────
+# OneTag's own accounts (domain onetag.com), downstream of the
+# adagio.io → onetag.com 6b859b96c564fbe hop declared above.
+
+appnexus.com, 13099, RESELLER, f5ab79cb980f11d1
 pubmatic.com, 161593, RESELLER, 5d62403b186f2ace
 rubiconproject.com, 11006, RESELLER, 0bfd66d529a55807
-video.unrulymedia.com, 586616193, RESELLER
-smartadserver.com, 4111, RESELLER
+smartadserver.com, 4111, RESELLER, 060d053dcf45cbf3
+video.unrulymedia.com, 586616193, RESELLER, 98c21ef9a666c68b
+
+onetag.com, 97d79a66340e9ee, DIRECT
+onetag.com, 97d79a66340e9ee-OB, RESELLER
