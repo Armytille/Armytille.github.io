@@ -41,6 +41,8 @@ openx.com, 599669638, RESELLER, 6a698e2ec38604c6
 # rubiconproject.com sellers.json: 22884 = INTERMEDIARY "Google" / google.com
 rubiconproject.com, 22884, RESELLER, 0bfd66d529a55807
 
+#Liftoff
+vungle.com, 6abfee0032a9df1341020688, DIRECT, c107d686becd2d77
 
 # ── Resellers: Adagio supply chain ────────────────────────────────────────────
 # Adagio-owned accounts (domain adagio.io in each ad system's sellers.json).
